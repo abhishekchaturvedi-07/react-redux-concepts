@@ -10,28 +10,28 @@ import {
 const initialState = {
   contacts: [
     {
-      id: 1,
+      id: '1',
       name: "Abhishek Chaturvedi ",
       username: "abhishek.chaturvedi",
       email: "abhishek.chaturvedi@netccecntric.biz",
       phone: "9999999999",
     },
     {
-      id: 2,
+      id: '2',
       name: "Ramba Singhania ",
       username: "desouza.rambo",
       email: "rambo.desouza@abccomp.biz",
       phone: "876543572",
     },
     {
-      id: 3,
+      id: '3',
       name: "Terry Jom",
       username: "terry.jom",
       email: "terry.jom@abccomp.biz",
       phone: "9999999999",
     },
     {
-      id: 4,
+      id: '4',
       name: "Este R",
       username: "este.r",
       email: "este.r@abccomp.biz",

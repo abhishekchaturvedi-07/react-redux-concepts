@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Questions from './basicQuestions';
+import Questions from './Questions';
 import './basiccQuestions.css';
 
 

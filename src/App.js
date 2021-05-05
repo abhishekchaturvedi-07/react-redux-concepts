@@ -1,34 +1,24 @@
 import React, { useEffect, useState } from "react";
+import { Provider } from "react-redux";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Contacts from "./components/contacts/Contacts";
 import Navbar from "./components/coreComponents/navbar/Navbar";
-import { Provider } from "react-redux";
-import "./styles/App.scss";
 import store from "./redux/store";
-// import persistor from "./redux/store";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import AddContact from "./components/addContact/AddContact";
 import EditContact from "./components/editContact/EditContact";
+// import persistor from "./redux/store";
 // import { PersistGate } from "redux-persist/integration/react";
 
-//Green Badge
-import BasicQuesntions from './components/basicQuestions'
-//HOC
-import Hello from './components/highOrderComponent/Hello'
-//Routing Demo
-import RoutingDemo from './components/routingDemo/RoutingDemo'
 import Routed from './components/routingDemo/Routed'
-//Dyanamic Style Demo
-import DyanamicStyle from './components/dyanamicStyle/DyanamicStyle'
-//Context Demo
-import Context from './components/context/Context'
 
 //reading capability artificial intelligence
 import alanBtn from "@alan-ai/alan-sdk-web";
 import wordsToNumbers from "words-to-numbers";
 import { Typography } from "@material-ui/core";
-
 import { NewsCards, Modal } from "./components";
 import useStyles from "./styles";
+import "./styles/App.scss";
+import Badges from "./components/badges/Badges";
 
 const alanKey =
   "72b7b6cf4f5dde13a00780067ae2054f2e956eca572e1d8b807a3e2338fdd0dc/stage";
@@ -77,14 +67,9 @@ function App() {
         <div className="App">
           <Navbar />
           <div className="container">
-            <BasicQuesntions />
-            <Hello propsFromAppJs="propsFromAppJs" />
             
-            <DyanamicStyle />
-            <Context />
-            <RoutingDemo />
-
             <Switch>
+              <Route exact path="/badges" component={Badges} />
               <Route exact path="/routing" component={Routed} />
               <Route exact path="/" component={Contacts} />
               <Route exact path="/contacts/add" component={AddContact} />

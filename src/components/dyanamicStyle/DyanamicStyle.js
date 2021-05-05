@@ -3,11 +3,11 @@ import React, { useState } from 'react';
 import './DyanamicStyle.css';
 
 const DyanamicStyle = () => {
-  const { useState } = React;
   let colors = [];
   let result = '';
   const [value, setValue] = useState();
   const handleChange = (e) => setValue(e.target.value);
+  //Logic
   if (value <= 33) {
     colors.push('text-red');
     result = 'FAIL';

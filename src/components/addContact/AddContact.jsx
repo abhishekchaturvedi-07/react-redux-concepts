@@ -14,7 +14,7 @@ const AddContact = () => {
     e.preventDefault();
     //pass action in dispatch, create a new contact object
     const new_contact = {
-      id: shortid.generate(),
+      id: shortid.generate()+'',
       name: name,
       phone: phone,
       email: email,
